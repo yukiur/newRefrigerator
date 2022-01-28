@@ -119,13 +119,13 @@ try {
                       	<select name="branch_meat" onchange="change(this)">
 	                        <optgroup label="①冷蔵庫に入れる"></optgroup>
 	                        <option>【肉】</option>
-	                        <option value="牛肉">牛肉</option>
-	                        <option value="豚肉">豚肉</option>
-	                        <option value="鶏肉">鶏肉</option>
-	                        <option value="ハム">ハム</option>
-	                        <option value="ベーコン">ベーコン</option>
 	                        <option value="ウインナー">ウインナー</option>
+	                        <option value="牛肉">牛肉</option>
+	                        <option value="鶏肉">鶏肉</option>
+	                        <option value="豚肉">豚肉</option>
+	                        <option value="ハム">ハム</option>
 	                        <option value="挽き肉">挽き肉</option>
+	                        <option value="ベーコン">ベーコン</option>
 	                    </select>
                       	<input type="text" placeholder="20**/**/**" name="expiration_meat">
                   	</div><!-- /#branch-meat -->
@@ -134,20 +134,30 @@ try {
 	                    <select name="branch_vegetable" onchange="change(this)">
 	                        <optgroup label="①冷蔵庫に入れる"></optgroup>
 	                        <option>【野菜】</option>
-	                        <option value="キャベツ">キャベツ</option>
-	                        <option value="レタス">レタス</option>
-	                        <option value="白菜">白菜</option>
-	                        <option value="ねぎ">ねぎ</option>
-	                        <option value="トマト">トマト</option>
-	                        <option value="きゅうり">きゅうり</option>
-	                        <option value="なす">なす</option>
-	                        <option value="ピーマン">ピーマン</option>
+	                        <option value="かぶ">かぶ</option>
 	                        <option value="かぼちゃ">かぼちゃ</option>
-	                        <option value="にんじん">にんじん</option>
-	                        <option value="大根">大根</option>
+	                        <option value="キャベツ">キャベツ</option>
+	                        <option value="きゅうり">きゅうり</option>
+	                        <option value="ゴボウ">ゴボウ</option>
+	                        <option value="小松菜">小松菜</option>
 	                        <option value="生姜">生姜</option>
+	                        <option value="セロリ">セロリ</option>
+	                        <option value="大根">大根</option>
+	                        <option value="とうもろこし">とうもろこし</option>
+	                        <option value="トマト">トマト</option>
+	                        <option value="なす">なす</option>
+	                        <option value="にら">にら</option>
+	                        <option value="にんにく">にんにく</option>
+	                        <option value="ねぎ">ねぎ</option>
+	                        <option value="にんじん">にんじん</option>
+	                        <option value="白菜">白菜</option>
+	                        <option value="パプリカ">パプリカ</option>
+	                        <option value="ピーマン">ピーマン</option>
+	                        <option value="ブロッコリー">ブロッコリー</option>
+	                        <option value="ほうれん草">ほうれん草</option>
+	                        <option value="レタス">レタス</option>
 	                        <option value="れんこん">れんこん</option>
-	                    </select><input type="text" placeholder="20**/**/**" name="expiration_vegetable">
+	                	</select><input type="text" placeholder="20**/**/**" name="expiration_vegetable">
                   	</div><!-- /#branch-vegetable -->
                   
 	                <div id="branch-fruit"> 
@@ -155,12 +165,16 @@ try {
 	                        <optgroup label="①冷蔵庫に入れる"></optgroup>
 	                        <option>【果物】</option>
 	                        <option value="いちご">いちご</option>
-	                        <option value="みかん・柑橘類">みかん・柑橘類</option>
+	                        <option value="イチジク">イチジク</option>
 	                        <option value="キウイ">キウイ</option>
+	                        <option value="スイカ">スイカ</option>
 	                        <option value="梨">梨</option>
-	                        <option value="バナナ">バナナ</option>
 	                        <option value="パイン">パイン</option>
+	                        <option value="バナナ">バナナ</option>
 	                        <option value="ぶどう">ぶどう</option>
+	                        <option value="マスカット">マスカット</option>
+	                        <option value="マンゴー">マンゴー</option>
+	                        <option value="みかん・柑橘類">みかん・柑橘類</option>
 	                        <option value="メロン">メロン</option>
 	                        <option value="桃">桃</option>
 	                        <option value="りんご">りんご</option>
@@ -172,12 +186,25 @@ try {
 	                    <select name="branch_fish" onchange="change(this)">
 	                        <optgroup label="①冷蔵庫に入れる"></optgroup>
 	                        <option>【魚介類】</option>
-	                        <option value="鮭">鮭</option>
-	                        <option value="ぶり">ぶり</option>
-	                        <option value="さば">さば</option>
-	                        <option value="エビ">エビ</option>
+	                        <option value="アジ">アジ</option>
+	                        <option value="穴子">穴子</option>
+	                        <option value="鮎">鮎</option>
 	                        <option value="イカ">イカ</option>
+	                        <option value="ウナギ">ウナギ</option>
+	                        <option value="ウニ">ウニ</option>
+	                        <option value="エビ">エビ</option>
+	                        <option value="牡蠣">牡蠣</option>
+	                        <option value="カレイ">カレイ</option>
+	                        <option value="鮭">鮭</option>
+	                        <option value="サザエ">サザエ</option>
+	                        <option value="鯖">鯖</option>
+	                        <option value="サンマ">サンマ</option>
+	                        <option value="しらす">しらす</option>
+	                        <option value="鯛">鯛</option>
 	                        <option value="タコ">タコ</option>
+	                        <option value="鱈">鱈</option>
+	                        <option value="ブリ">ブリ</option>
+	                        <option value="魚卵">魚卵</option>
 	                        <option value="貝類">貝類</option>
 	                        <option value="刺身">刺身</option>
 	                        <option value="練り物">練り物</option>
@@ -188,10 +215,13 @@ try {
 	                    <select name="branch_dry" onchange="change(this)">
 	                        <optgroup label="①冷蔵庫に入れる"></optgroup>
 	                        <option>【乾物】</option>
-	                        <option value="海苔">海苔</option>
+	                        <option value="キクラゲ">キクラゲ</option>
 	                        <option value="昆布">昆布</option>
-	                        <option value="わかめ">わかめ</option>
+	                        <option value="椎茸">椎茸</option>
+	                        <option value="海苔">海苔</option>
 	                        <option value="春雨">春雨</option>
+	                        <option value="ひじき">ひじき</option>
+	                        <option value="わかめ">わかめ</option>
 	                    </select><input type="text" placeholder="20**/**/**" name="expiration_dry">
 	                </div><!-- /#branch-dry -->
 	                  
@@ -199,9 +229,10 @@ try {
 	                    <select name="branch_mushroom" onchange="change(this)">
 	                        <optgroup label="①冷蔵庫に入れる"></optgroup>
 	                        <option>【きのこ】</option>
+	                        <option value="えのきだけ">えのきだけ</option>
+	                        <option value="エリンギ">エリンギ</option>
 	                        <option value="しいたけ">しいたけ</option>
 	                        <option value="しめじ">しめじ</option>
-	                        <option value="エリンギ">エリンギ</option>
 	                        <option value="まいたけ">まいたけ</option>
 	                    </select><input type="text" placeholder="20**/**/**" name="expiration_mushroom">
 	                </div><!-- /#branch-mushroom -->
@@ -211,7 +242,6 @@ try {
 	                        <optgroup label="①冷蔵庫に入れる"></optgroup>
 	                        <option>【卵】</option>
 	                        <option value="鶏卵">鶏卵</option>
-	                        <option value="うずら">うずら</option>
 	                    </select><input type="text" placeholder="20**/**/**" name="expiration_egg">
 	                </div><!-- /#branch-egg -->
 	                  
@@ -219,20 +249,26 @@ try {
 	                    <select name="branch_potato" onchange="change(this)">
 	                        <optgroup label="①冷蔵庫に入れる"></optgroup>
 	                        <option>【いも類】</option>
-	                        <option value="じゃがいも">じゃがいも</option>
-	                        <option value="さつまいも">さつまいも</option>
-	                        <option value="里いも">里いも</option>
-	                        <option value="長いも">長いも</option>
 	                        <option value="こんにゃく">こんにゃく</option>
-	                    </select><input type="text" placeholder="20**/**/**" name="expiration_potato">
+	                    	<option value="さつまいも">さつまいも</option>
+	                        <option value="里いも">里いも</option>
+	                        <option value="じゃがいも">じゃがいも</option>
+	                        <option value="長いも">長いも</option>
+	                	</select><input type="text" placeholder="20**/**/**" name="expiration_potato">
 	                </div><!-- /#branch-potato -->
 	                  
 	                <div id="branch-bread"> 
 	                    <select name="branch_bread" onchange="change(this)">
 	                        <optgroup label="①冷蔵庫に入れる"></optgroup>
 	                        <option>【パン】</option>
+	                        <option value="菓子パン">菓子パン</option>
 	                        <option value="食パン">食パン</option>
+	                        <option value="惣菜パン">惣菜パン</option>
+	                        <option value="デニッシュパン">デニッシュパン</option>
+	                        <option value="ピザ">ピザ</option>
 	                        <option value="フランスパン">フランスパン</option>
+	                        <option value="ロールパン">ロールパン</option>
+	                        
 	                    </select><input type="text" placeholder="20**/**/**" name="expiration_bread">
 	                </div><!-- /#branch-bread -->
 	                  
@@ -242,8 +278,8 @@ try {
 	                        <option>【米類】</option>
 	                        <option value="ごはん">ごはん</option>
 	                        <option value="生米">生米</option>
-	                        <option value="もち米">もち米</option>
 	                        <option value="餅">餅</option>
+	                        <option value="もち米">もち米</option>
 	                    </select><input type="text" placeholder="20**/**/**" name="expiration_rice">
 	                </div><!-- /#branch-rice -->
 	                  
@@ -253,8 +289,10 @@ try {
 	                        <option>【乳製品】</option>
 	                        <option value="牛乳">牛乳</option>
 	                        <option value="チーズ">チーズ</option>
-	                        <option value="ヨーグルト">ヨーグルト</option>
 	                        <option value="生クリーム">生クリーム</option>
+							<option value="バター">バター</option>
+	                        <option value="ヨーグルト">ヨーグルト</option>
+	                        <option value="練乳">練乳</option>
 	                    </select><input type="text" placeholder="20**/**/**" name="expiration_milk">
 	                </div><!-- /#branch-milk -->
 	                  
@@ -262,10 +300,14 @@ try {
 	                    <select name="branch_bean" onchange="change(this)">
 	                        <optgroup label="①冷蔵庫に入れる"></optgroup>
 	                        <option>【豆類】</option>
-	                        <option value="豆腐">豆腐</option>
-	                        <option value="油揚げ">油揚げ</option>
 	                        <option value="厚揚げ">厚揚げ</option>
+	                        <option value="油揚げ">油揚げ</option>
+	                        <option value="いんげん豆">いんげん豆</option>
+	                        <option value="枝豆">枝豆</option>
+	                        <option value="スナップエンドウ">スナップエンドウ</option>
+	                        <option value="豆腐">豆腐</option>
 	                        <option value="納豆">納豆</option>
+	                        <option value="もやし">もやし</option>
 	                    </select><input type="text" placeholder="20**/**/**" name="expiration_bean">
 	                </div><!-- /#branch-bean -->
 	                  
@@ -274,8 +316,8 @@ try {
 	                        <optgroup label="①冷蔵庫に入れる"></optgroup>
 	                        <option>【麺類】</option>
 	                        <option value="うどん">うどん</option>
-	                        <option value="そば">そば</option>
 	                        <option value="そうめん">そうめん</option>
+	                        <option value="そば">そば</option>
 	                        <option value="中華麺">中華麺</option>
 	                        <option value="パスタ">パスタ</option>
 	                    </select><input type="text" placeholder="20**/**/**" name="expiration_noodles">

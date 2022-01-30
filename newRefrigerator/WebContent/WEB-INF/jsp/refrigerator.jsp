@@ -364,13 +364,13 @@ try {
 					</div><!-- /.over-food -->
 				</div><!-- /.over --> 
 			</div><!-- /.expiration -->       
-			<footer>
+			 
+		</div><!-- /#home -->
+		<footer>
 				<div class="footer">
 						<p><small>&copy; 2022 yukiur</small></p>
 				</div>
-			</footer> 
-		</div><!-- /#home -->
-		
+		</footer>
 		<script src="scripts/jquery-3.4.1.min.js"></script>
 		<script>
 			'use strict';

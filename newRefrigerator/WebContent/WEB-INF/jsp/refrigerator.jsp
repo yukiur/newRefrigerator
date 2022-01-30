@@ -75,7 +75,7 @@ try {
 					<div id="select-2"><a>②中身をみる</a></div>
 				</div><!-- /.branch0 -->
 				<!-- 追加 要修正　-->
-				<form action="/newRefrigerator/DeleteFoodServlet" method="post">
+				<form action="DeleteFoodServlet" method="post">
 				<div class="branch-contents hidden">
 					<div class="back-or-delete">
 						<h5 class="back2"><a>≪戻る</a></h5>
@@ -108,7 +108,7 @@ try {
 				</div><!-- /.branch-contents -->
 				</form>
 				<!-- ここまで追加 要修正　-->
-              	<form action="/newRefrigerator/RegisterFoodServlet" method="post">
+              	<form action="RegisterFoodServlet" method="post">
               	<div class="branch-all hidden">
                   	<div class="back-or-save">
                       	<h5 class="back"><a>≪戻る</a></h5>
@@ -334,30 +334,41 @@ try {
 				<div class="soon">
 					<h4>もうすぐ期限</h4>
 					<div class="soon-food soon-food-hidden">
-			<% if(fad != null) { %>
-				<% for(String food: fad.keySet()) { %>
-					<% int deadline = fad.get(food); %>
-					<p><%= food %>残り<%= deadline %>日</p>
-				<% } %>
-			<% } %>			
+				<% if(fad != null) { %>
+					<% for(String food: fad.keySet()) { %>
+						<% int deadline = fad.get(food); %>
+						<p><%= food %>残り<%= deadline %>日</p>
+					<% } %>
+				<% } %>			
+						<h4 class="soon-all-display">すべて見る</h4>
+					
+						<h4 class="soon-all-display2 hidden">一部かくす</h4>
+					
 					</div><!-- /.soon-food -->
-					<h4 class="soon-all-display">すべて見る</h4>
 				</div><!-- /.soon -->
+				
 				<div class="over">
 					<h4>期限切れ</h4>
 					<div class="over-food over-food-hidden">
 					
-			<% if(ovf != null) { %>
-				<% for(String food: ovf) { %>
-					<p><%= food %></p>
+				<% if(ovf != null) { %>
+					<% for(String food: ovf) { %>
+						<p><%= food %></p>
+					<% } %>
 				<% } %>
-			<% } %>
-			
-			
+					
+						<h4 class="over-all-display">すべて見る</h4>
+					
+						<h4 class="over-all-display2 hidden">一部かくす</h4>
+				
 					</div><!-- /.over-food -->
-					<h4 class="over-all-display">すべて見る</h4>
 				</div><!-- /.over --> 
-			</div><!-- /.expiration -->        
+			</div><!-- /.expiration -->       
+			<footer>
+				<div class="footer">
+						<p><small>&copy; 2022 yukiur</small></p>
+				</div>
+			</footer> 
 		</div><!-- /#home -->
 		
 		<script src="scripts/jquery-3.4.1.min.js"></script>
@@ -390,13 +401,16 @@ try {
 			$('.back2').on('click', function(){
 			$('.branch0, .branch-contents').toggleClass('hidden');
 			});
-//----------------------- 期限を全て見る ------------------        
-			$('.soon-all-display').on('click', function(){
+//----------------------- 期限を全て見る or 隠す------------------        
+			$('.soon-all-display, .soon-all-display2').on('click', function(){
 			$('.soon-food').toggleClass('soon-food-show soon-food-hidden');
+			$('.soon-all-display2, .soon-all-display').toggleClass('hidden');
 			});
+
 			
-			$('.over-all-display').on('click', function(){
+			$('.over-all-display, .over-all-display2').on('click', function(){
 			$('.over-food').toggleClass('over-food-show over-food-hidden');
+			$('.over-all-display2, .over-all-display').toggleClass('hidden');
 			});
 			
 		</script>

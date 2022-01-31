@@ -44,9 +44,9 @@ try {
         <meta charset="utf-8">
         <title>My Refrigerator</title>
         <meta name="description" content="冷蔵庫の中身を整理するアプリ">
-        <!-- ファビコンをつくる -->
-        <link rel="icon" type="image/png" href="images/favicon.png">
-        <!-- スマホ用式もつくる -->
+        <!-- ファビコン -->
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <!-- レスポンシブデザイン -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSS -->
@@ -74,7 +74,7 @@ try {
 					<div id="select-1"><a>①冷蔵庫に入れる</a></div><br>
 					<div id="select-2"><a>②中身をみる</a></div>
 				</div><!-- /.branch0 -->
-				<!-- 追加 要修正　-->
+				
 				<form action="DeleteFoodServlet" method="post">
 				<div class="branch-contents hidden">
 					<div class="back-or-delete">
@@ -107,7 +107,7 @@ try {
 					<div id="message">冷蔵庫から削除するものを選択してください</div>
 				</div><!-- /.branch-contents -->
 				</form>
-				<!-- ここまで追加 要修正　-->
+				
               	<form action="RegisterFoodServlet" method="post">
               	<div class="branch-all hidden">
                   	<div class="back-or-save">

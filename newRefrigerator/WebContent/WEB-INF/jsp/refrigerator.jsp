@@ -2,7 +2,13 @@
     pageEncoding="UTF-8"%>
 <%@ page import="model.FoodLists, model.Food, model.OverFood, model.FoodAndDeadline, java.util.*" %>
 <%
-//　セッションスコープに保存されたフードリスト(食べ物の種類ごとに分けたリスト)を取得
+// セッションスコープの有効期間を設定
+if (session == null) {
+	System.out.println("セッションがありません");
+	} else {
+	session.setMaxInactiveInterval(1800);
+}
+// セッションスコープに保存されたフードリスト(食べ物の種類ごとに分けたリスト)を取得
 FoodLists foodLists = (FoodLists) session.getAttribute("foodLists");
 if (foodLists == null) {
 	foodLists = new FoodLists();
@@ -13,7 +19,7 @@ try {
 } catch (NullPointerException e) {
 	System.out.println("nullエラーです");
 }
-//　セッションスコープに保存されたフード＆デッドライン（賞味期限内の食べ物の【名前】と【期限】）を取得
+// セッションスコープに保存されたフード＆デッドライン（賞味期限内の食べ物の【名前】と【期限】）を取得
 
 FoodAndDeadline foodAndDeadline = (FoodAndDeadline) session.getAttribute("foodAndDeadline");
 if (foodAndDeadline == null) {
@@ -57,8 +63,8 @@ try {
 
 	<body>
 		<div id="home" class="big-bg">
+			<p class="logout-button"><a id="logout-button" href="LogoutUserServlet">logout</a></p>
 			<div class="big-refrigerator wrapper">
-			        
 				<h1><img class="refrigerator" src="images/refrigerator.png" alt="冷蔵庫"></h1>
 				
 				<div class="home-content">

@@ -16,6 +16,7 @@ import model.AllList;
 import model.Food;
 import model.FoodAndDeadline;
 import model.FoodLists;
+import model.Login;
 import model.OverFood;
 import model.RegisterFoodLogic;
 
@@ -26,21 +27,30 @@ public class RegisterFoodServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		FoodLists foodLists = null;
-		session.setAttribute("foodLists", foodLists);
-		FoodAndDeadline foodAndDeadline = null;
-		session.setAttribute("foodAndDeadline", foodAndDeadline);
-		OverFood overFood = null;
-		session.setAttribute("overFood", overFood);
-		
-		
+		// セッションスコープの有効期間を設定
+		if (session == null) {
+			System.out.println("セッションがありません");
+			} else {
+			session.setMaxInactiveInterval(1800);
+		}	
+		// フォワード先
+		String forwardPath = null;
+		Login login = (Login) session.getAttribute("login");
+		try {
+			if(login.getLogin().equals("success")) {
+				forwardPath = "/WEB-INF/jsp/refrigerator.jsp";
+			} else {
+				forwardPath = "/WEB-INF/jsp/loginFail.jsp";
+			}
+		} catch (NullPointerException e) {
+			forwardPath = "/WEB-INF/jsp/loginFail.jsp";
+		}
 		// フォワード
 		RequestDispatcher dispatcher = 
-				request.getRequestDispatcher("/WEB-INF/jsp/refrigerator.jsp");
+				request.getRequestDispatcher(forwardPath);
 		dispatcher.forward(request, response);
 	
 	}
-
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// RegisterFoodLogicのインスタンスを生成
@@ -94,7 +104,14 @@ public class RegisterFoodServlet extends HttpServlet {
 		
 		// セッションスコープを取得
 		HttpSession session = request.getSession();
+		// セッションスコープの有効期間を設定
+		if (session == null) {
+			System.out.println("セッションがありません");
+			} else {
+			session.setMaxInactiveInterval(1800);
+		}
 		
+
 // AllListを編集
 		// セッションスコープに保存されたAllListを取得
 		AllList allList = (AllList) session.getAttribute("allList");

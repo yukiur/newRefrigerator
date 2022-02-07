@@ -22,7 +22,19 @@ img {
     margin: 0 auto;
     padding: 0 4%;
 }
-
+.logout-button {
+    background: rgba(255,255,255,.5);
+    border: 1px #fff solid;
+    border-radius: 5px;
+    text-align: center;
+    width: 80px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.logout-button a {
+    color: #606468;
+}
 /* 冷蔵庫画像 */
 h1 {
     text-align: center;
@@ -183,7 +195,7 @@ h4 {
     border-radius: 5%;
     font-size: 1rem;
     position: absolute;
-    top: 15%;
+    top: 10%;
     left: 40%;
     z-index: 1;
 }
@@ -263,7 +275,7 @@ h4 {
         min-width: none;
     }
     .branch{
-        top: 20%;
+        top: 10%;
         left: 5%;    
     }
     
